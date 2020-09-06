@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="message"></p>
+    <script>
+        let yourName = '태인';
+
+        const template = `
+            <section>
+                <h2>${yourName}님 최고에요!</h2>
+            </section>
+            `;
+        document.querySelector('.message').innerHTML = template;
+    </script>
+</body>
+</html>
