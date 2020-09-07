@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <title>Document</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu {
+            display: flex;
+            background: #000;
+            padding: 2rem;
+            border-radius: 20px;
+        }
+        .menu-btn {
+            display: inline-flex;
+            margin: 0 1rem;
+            width: 200px;
+        }
+        .menu-btn img {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <button class="menu-btn" data-value="1"><img src="./images/poring.png" alt=""><span>버튼1</span></button>
+        <button class="menu-btn" data-value="2"><img src="./images/poring2.png" alt=""><span>버튼2</span></button>
+        <button class="menu-btn" data-value="3"><img src="./images/rocket.png" alt=""><span>버튼3</span></button>
+    </div>
+    <script>
+        const menu = document.querySelector('.menu');
+
+        function clickHandler(event) {
+            let elem = event.target;
+            while (!elem.classList.contains('menu-btn')) {
+                elem = elem.parentNode;
+
+                if (elem.nodeName === 'BODY') {
+                    elem = null;
+                    return;
+                }    
+            }
+            console.log(elem.dataset.value)
+        }
+        menu.addEventListener('click', clickHandler)
+    </script>
+</body>
+</html>
