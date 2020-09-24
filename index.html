@@ -4,28 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./reset.css">
-    <style>
-        .poring {
-            position: absolute;
-            width:100px;
-            transition: 1s;
-        }
-        .poring img {
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <figure class="poring">
-        <img src="./images/poring2.png" alt="포링">
-    </figure>
-    <script>
-        const poring = document.querySelector('.poring');
-        
-        window.addEventListener('click', e => {
-            poring.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-        });
-    </script>
+    <div class="leaflet">
+        <div class="page">
+            <div class="page-face">1F</div>
+            <div class="page-face">1B</div>
+        </div>
+        <!-- <div class="page">
+            <div class="page-face">2F</div>
+            <div class="page-face">2B</div>
+        </div>
+        <div class="page">
+            <div class="page-face">3F</div>
+            <div class="page-face">3B</div>
+        </div> -->
+    </div>
 </body>
 </html>
